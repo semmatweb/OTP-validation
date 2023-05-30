@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Validation Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Validation</h2>
+        <form id="otpForm" onsubmit="validateOTP(event)">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit1" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit2" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit3" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit4" maxlength="1" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Verify</button>
+        </form>
+        <div id="message"></div>
+        <div class="otp-info">
+      <div id="generatedOTP"></div>
+      <div id="expiration" hidden></div>
+      <div id="countdown"></div>
+      <button id="resendButton" type="button" class="btn btn-secondary" onclick="resendOTP()">Resend</button>
+        </div>
+      </div>
+</body>
+<script src="./js/main.js"></script>
+</html>
